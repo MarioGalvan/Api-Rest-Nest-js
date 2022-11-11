@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 
 interface UserInterface {
@@ -11,7 +11,9 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get('/hello/:name')
-  getHello2(@Param() params:UserInterface ): string {
+  getHello2(@Param() params: UserInterface): string {
     return this.appService.getHello(params.name);
   }
+
+  
 }
