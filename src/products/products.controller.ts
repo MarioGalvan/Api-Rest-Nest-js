@@ -44,6 +44,7 @@ export class ProductsController {
   @Post()
   createProduct(@Body() payload: CreateProductDto): any {
     return this.productsService.create(payload);
+    
     // return {
     //   message: 'Product Created',
     //   payload,
