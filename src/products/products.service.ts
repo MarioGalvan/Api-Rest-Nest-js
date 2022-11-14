@@ -52,6 +52,7 @@ export class ProductsService {
       ...payload,
     };
     this.products.push(newProduct);
+    return newProduct;
   }
 
   update(id: string, payload: UpdateProductDto) {
