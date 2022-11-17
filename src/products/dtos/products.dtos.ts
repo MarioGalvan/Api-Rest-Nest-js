@@ -9,7 +9,9 @@ import { ApiProperty, PartialType, OmitType } from '@nestjs/swagger';
 
 
 export class CreateProductDto {
-  @ApiProperty()
+  @ApiProperty({
+    description: 'The name of the Product',
+  })
   @IsString()
   @IsNotEmpty()
   readonly name: string;
